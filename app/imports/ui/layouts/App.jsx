@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
+import FooterExample from '../components/FoorterExample';
 import Landing from '../pages/Landing';
 import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
@@ -34,7 +35,7 @@ const App = () => (
         <Route path="/notauthorized" element={<NotAuthorized/>}/>
         <Route element={<NotFound/>}/>
       </Routes>
-      <Footer/>
+      <FooterExample/>
     </div>
   </Router>
 );
