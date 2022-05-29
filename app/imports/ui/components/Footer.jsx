@@ -1,18 +1,31 @@
 import React from 'react';
-import { Col, Container } from 'react-bootstrap';
+import { Col, Row, Container, Stack } from 'react-bootstrap';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const Footer = () => {
   const divStyle = { paddingTop: '15px' };
   return (
-    <footer>
+    <footer className='footer'>
       <Container style={divStyle}>
-        <Col className="text-center">
-          <hr/>
-          Department of Information and Computer Sciences <br/>
-          University of Hawaii<br/>
-          Honolulu, HI 96822 <br/>
-          <a href="http://ics-software-engineering.github.io/meteor-application-template-react">Template Home Page</a></Col>
+        <Row>
+          <Col>
+            <Stack>
+              <h3>Links</h3>
+              <a href="">Home</a>
+              <a href="">About Us</a>
+              <a href="">Location</a>
+            </Stack>
+          </Col>
+          <Col>
+            <Stack>
+              <h3>Contact</h3>
+              <a href="">Facebook</a>
+              <a href="">Instagram</a>
+              Phone number<br/>
+              Email address
+            </Stack>
+          </Col>
+        </Row>
       </Container>
     </footer>
   );
