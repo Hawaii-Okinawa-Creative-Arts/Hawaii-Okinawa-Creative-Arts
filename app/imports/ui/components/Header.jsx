@@ -11,7 +11,6 @@ const NavBar = () => {
   const { currentUser } = useTracker(() => ({
     currentUser: Meteor.user() ? Meteor.user().username : '',
   }), []);
-  const menuStyle = { marginBottom: '10px' };
   return (
     <Navbar collapseOnSelect expand="lg" className='header' variant="dark">
       <Container>
@@ -23,6 +22,8 @@ const NavBar = () => {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#about-us">About Us</Nav.Link>
             <Nav.Link href="#location">Location</Nav.Link>
+            <Nav.Link href="#newsletter">Newsletter</Nav.Link>
+            <Nav.Link href="#events">Events</Nav.Link>
             {currentUser ? ([
               <Nav.Link as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Stuff</Nav.Link>,
               <Nav.Link as={NavLink} activeClassName="active" exact to="/list" key='list'>List Stuff</Nav.Link>,
