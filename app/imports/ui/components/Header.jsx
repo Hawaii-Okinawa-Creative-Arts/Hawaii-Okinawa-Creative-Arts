@@ -13,12 +13,16 @@ const NavBar = () => {
   }), []);
   const menuStyle = { marginBottom: '10px' };
   return (
-    <Navbar bg="light" expand="lg" style={menuStyle}>
+    <Navbar collapseOnSelect expand="lg" style={menuStyle}>
       <Container>
-        <Navbar.Brand as={NavLink} activeClassName="active" exact to="/"><h1>meteor-application-template-react</h1></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto justify-content-start">
+        <img src='https://mdbootstrap.com/img/new/standard/city/041.webp' className='img-fluid hover-overlay' style={{ maxWidth: '4rem' }} />
+        <Navbar.Brand as={NavLink} activeClassName="active" exact to="/" style={{ textAlign: 'right' }}><h5>Hawaii Okinawa Creative Arts</h5></Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll"/>
+        <Navbar.Collapse id="navbarScroll" style={{ textAlign: 'right' }}>
+          <Nav className="me-auto justify-content-start" style={{ textAlign: 'right' }}>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="#about-us">About Us</Nav.Link>
+            <Nav.Link href="#location">Location</Nav.Link>
             {currentUser ? ([
               <Nav.Link as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Stuff</Nav.Link>,
               <Nav.Link as={NavLink} activeClassName="active" exact to="/list" key='list'>List Stuff</Nav.Link>,
@@ -28,11 +32,11 @@ const NavBar = () => {
             ) : ''}
           </Nav>
           <Nav className="justify-content-end">
-            {currentUser === '' ? (<NavDropdown id="login-dropdown" title="Login">
-              <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} exact to="/signin"><PersonFill/>Sign in</NavDropdown.Item>
-              <NavDropdown.Item id="login-dropdown-sign-up" as={NavLink} exact to="/signup"><PersonPlusFill/>Sign up</NavDropdown.Item>
-            </NavDropdown>) : (<NavDropdown id="navbar-current-user" title={currentUser}>
-              <NavDropdown.Item id="navbar-sign-out" as={NavLink} exact to="/signout"><BoxArrowRight/> Sign out</NavDropdown.Item>
+            {currentUser === '' ? (<NavDropdown id="login-dropdown" title="Login" style={{ textAlign: 'right' }}>
+              <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} exact to="/signin" style={{ textAlign: 'right' }}><PersonFill />Sign in</NavDropdown.Item>
+              <NavDropdown.Item id="login-dropdown-sign-up" as={NavLink} exact to="/signup" style={{ textAlign: 'right' }}><PersonPlusFill />Sign up</NavDropdown.Item>
+            </NavDropdown>) : (<NavDropdown id="navbar-current-user" title={currentUser} >
+              <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout"><BoxArrowRight /> Sign out</NavDropdown.Item>
             </NavDropdown>)}
           </Nav>
         </Navbar.Collapse>
