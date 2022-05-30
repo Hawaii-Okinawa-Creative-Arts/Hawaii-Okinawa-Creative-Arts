@@ -13,10 +13,10 @@ const NavBar = () => {
   }), []);
   const menuStyle = { marginBottom: '10px' };
   return (
-    <Navbar collapseOnSelect expand="lg" style={menuStyle}>
+    <Navbar collapseOnSelect expand="lg" className='header' variant="dark">
       <Container>
-        <img src='https://mdbootstrap.com/img/new/standard/city/041.webp' className='img-fluid hover-overlay' style={{ maxWidth: '4rem' }} />
-        <Navbar.Brand as={NavLink} activeClassName="active" exact to="/" style={{ textAlign: 'right' }}><h5>Hawaii Okinawa Creative Arts</h5></Navbar.Brand>
+        <img src='/images/HOCA-Logo-cropped.jpg' className='img-fluid hover-overlay' style={{ maxWidth: '6em' }} size='huge' />
+        <Navbar.Brand as={NavLink} activeClassName="active" exact to="/" style={{ color: 'white' }}><h2>Hawaii Okinawa Creative Arts</h2></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll"/>
         <Navbar.Collapse id="navbarScroll" style={{ textAlign: 'right' }}>
           <Nav className="me-auto justify-content-start" style={{ textAlign: 'right' }}>
