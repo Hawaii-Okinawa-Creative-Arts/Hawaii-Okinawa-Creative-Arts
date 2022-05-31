@@ -9,7 +9,7 @@ const TopCard = () => (
         <Col xs={4}>
           <Image roundedCircle src="/images/meteor-logo.png" width="150px" />
         </Col>
-        <Col xs={8} className="d-flex flex-column justify-content-center">
+        <Col xs={8} className="d-flex flex-column justify-content-center" >
           <h1>Hello World</h1>
           <p>Now get to work and modify this app!</p>
         </Col>
